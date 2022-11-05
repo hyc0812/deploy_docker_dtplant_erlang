@@ -1,0 +1,7 @@
+{
+    "[erlang]": {
+        "editor.defaultFormatter": "szTheory.erlang-formatter",
+        "editor.formatOnSave": true
+      },
+      "erlangFormatter.formatter": "rebar3_format",
+}
