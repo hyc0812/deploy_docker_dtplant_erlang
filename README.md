@@ -1,9 +1,6 @@
-docker_ex
-=====
+deploy_docker_dtplant_erlang
 
-An OTP application
+Assignment_for digital twin class.
 
-Build
------
+This DT is built by Erlang server.
 
-    $ rebar3 compile
