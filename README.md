@@ -1,5 +1,16 @@
 ### Play with Kubernetes GKE Cluster
 
+First set the project you want to configure:
+
+```
+gcloud config set project yong-house-marketplace-app
+```
+Updated property [core/project].
+
+> My project name: yong-house-marketplace-app
+
+
+
 
 ```
 kubectl version --short
