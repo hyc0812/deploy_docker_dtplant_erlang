@@ -57,7 +57,26 @@ hyc0812/yong-dt-erlang                                        1.0       33b352d9
 us.gcr.io/yong-house-marketplace-app/hyc0812/yong-dt-erlang   1.0       33b352d9c7b4   15 hours ago   17.3MB
 
 
-5. 
+5. Push the newly-taged image to Container Registry:
+
+```
+docker push us.gcr.io/yong-house-marketplace-app/hyc0812/yong-dt-erlang:1.0
+```
+
+The push refers to repository [us.gcr.io/yong-house-marketplace-app/hyc0812/yong-dt-erlang]
+
+10915ef1e106: Pushed
+
+ac6ff7601d7d: Pushed
+
+e5e13b0c77cb: Layer already exists
+
+1.0: digest: sha256:17f2d97cca1eeaed37db3a225af166be886ab16fecdd6439b56196ba76114eb6 size: 950
+
+
+6. And you can now see your new image existed in Container Registry [My Link](https://console.cloud.google.com/gcr/images/yong-house-marketplace-app/us/hyc0812/yong-dt-erlang@sha256:17f2d97cca1eeaed37db3a225af166be886ab16fecdd6439b56196ba76114eb6/details?project=yong-house-marketplace-app)
+
+
 
 
 
