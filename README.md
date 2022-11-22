@@ -148,10 +148,12 @@ kubectl create deployment yong-dt-erlang --image=us.gcr.io/yong-house-marketplac
 11. Expose port for LoadBalancer
 
 ```
-kubectl expose deployment yong-dt-erlang --type LoadBalancer --port 80 --target-port 80
+kubectl expose deployment yong-dt-erlang --type LoadBalancer --port 8080 --target-port 8080 
 ```
 
 `service/yong-dt-erlang exposed`
+
+> The target-port should be the same with the port exposed in the image
 
 
 12. Show the running pods
@@ -165,8 +167,16 @@ NAME                              READY   STATUS    RESTARTS   AGE
 yong-dt-erlang-65dd476f5c-pgwtf   1/1     Running   0          6m43s
 
 
+### 13. Scale the pods! very convenient and powerful:
 
-13. Show the current service:
+```
+kubectl scale deployment yong-dt-erlang --replicas 2
+```
+
+deployment.apps/yong-dt-erlang scaled
+
+
+14. Show the current service:
 
 ```
 kubectl get service yong-dt-erlang
