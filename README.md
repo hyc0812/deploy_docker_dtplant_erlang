@@ -78,6 +78,38 @@ e5e13b0c77cb: Layer already exists
 
 
 
+7. Preparation for GKE cluster
+
+Set current project 
+
+```
+gcloud config set project yong-house-marketplace-app
+```
+
+Set compute zone:
+
+```
+gcloud config set compute/zone us-central1-a
+```
+
+
+8. Create Cluster on GKE:
+
+```
+gcloud container clusters create yong-cluster-01 --num-nodes=1
+```
+
+> cluster name: yong-cluster-01. number of nodes: 1
+
+
+9. 
+
+
+
+
+
+
+
 
 
 
