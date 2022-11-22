@@ -141,7 +141,7 @@ NAME               READY   UP-TO-DATE   AVAILABLE   AGE
 myapp-deployment   0/1     1            0           3m38s
 yongchanghe@MacBookPro deploy_docker_dtplant_erlang % kubectl apply -f pod.yaml             
 deployment.apps/myapp-deployment unchanged
-yongchanghe@MacBookPro deploy_docker_dtplant_erlang % kubectl get deployments               
+yongchanghe@MacBookPro deploy_docker_dtplant_erlang % kubectl get deployments                
 NAME               READY   UP-TO-DATE   AVAILABLE   AGE
 myapp-deployment   0/1     1            0           4m11s
 yongchanghe@MacBookPro deploy_docker_dtplant_erlang % kubectl get deployments               
