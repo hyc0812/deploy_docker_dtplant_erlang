@@ -8,7 +8,7 @@ Docker Image for this project:  hyc0812/yong-dt-erlang:1.0
 ```
 gcloud config set project yong-house-marketplace-app
 ```
-Updated property [core/project].
+`Updated property [core/project].`
 
 > My project name: yong-house-marketplace-app
 
@@ -86,11 +86,15 @@ Set current project
 gcloud config set project yong-house-marketplace-app
 ```
 
+`Updated property [core/project].`
+
 Set compute zone:
 
 ```
 gcloud config set compute/zone us-central1-a
 ```
+
+`Updated property [core/project].`
 
 
 8. Create Cluster on GKE:
@@ -101,16 +105,76 @@ gcloud container clusters create yong-cluster-01 --num-nodes=1
 
 > cluster name: yong-cluster-01. number of nodes: 1
 
+`kubeconfig entry generated for yong-cluster-01.
 
-9. 
+NAME: yong-cluster-01
+
+LOCATION: us-central1-a
+
+MASTER_VERSION: 1.23.12-gke.100
+
+MASTER_IP: 34.72.190.131
+
+MACHINE_TYPE: e2-medium
+
+NODE_VERSION: 1.23.12-gke.100
+
+NUM_NODES: 1
+
+STATUS: RUNNING`
+
+
+9. Get credentials from newly-created cluster and to be used in GKE Google Kubernetes Engine
+
+```
+gcloud container clusters get-credentials yong-cluster-01
+```
+
+Fetching cluster endpoint and auth data.
+
+kubeconfig entry generated for yong-cluster-01.
+
+
+10. Deploy the application (image from Container Registry) to the cluster
+
+```
+kubectl create deployment yong-dt-erlang --image=us.gcr.io/yong-house-marketplace-app/hyc0812/yong-dt-erlang:1.0
+```
+
+`deployment.apps/yong-dt-erlang created`
 
 
 
+11. Expose port for LoadBalancer
+
+```
+kubectl expose deployment yong-dt-erlang --type LoadBalancer --port 80 --target-port 80
+```
+
+`service/yong-dt-erlang exposed`
+
+
+12. Show the running pods
+
+```
+kubectl get pods
+```
+
+NAME                              READY   STATUS    RESTARTS   AGE
+
+yong-dt-erlang-65dd476f5c-pgwtf   1/1     Running   0          6m43s
 
 
 
+13. Show the current service:
 
+```
+kubectl get service yong-dt-erlang
+```
 
+NAME             TYPE           CLUSTER-IP    EXTERNAL-IP     PORT(S)        AGE
+
+yong-dt-erlang   LoadBalancer   10.28.8.144   34.72.154.183   80:31560/TCP   4m9s
 
 
 
