@@ -26,6 +26,44 @@ Or run the container in the background
 docker run -dp 8080:8080 hyc0812/yong-dt-erlang:1.0
 ```
 
+3. Stop contrainer
+
+```
+docker stop <container-ID>
+```
+
+4. Add the Container Registry registries to a project:
+
+Since my project `yong-house-marketplace-app` is running on us-center-1 which is regitered in the following:
+
+`us.gcr.io	Stores images in data centers in the United States`
+
+So change the tag as :
+
+```
+docker tag hyc0812/yong-dt-erlang:1.0 us.gcr.io/yong-house-marketplace-app/hyc0812/yong-dt-erlang:1.0
+```
+
+show the images again, and a new image with a tag we specified has been produced:
+
+```
+yongchanghe8@cloudshell:~ (yong-house-marketplace-app)$ docker images
+```
+
+REPOSITORY                                                    TAG       IMAGE ID       CREATED        SIZE
+
+hyc0812/yong-dt-erlang                                        1.0       33b352d9c7b4   15 hours ago   17.3MB
+
+us.gcr.io/yong-house-marketplace-app/hyc0812/yong-dt-erlang   1.0       33b352d9c7b4   15 hours ago   17.3MB
+
+
+5. 
+
+
+
+
+
+
 
 Unable to find image 'hyc0812/yong-dt-erlang:1.0' locally
 1.0: Pulling from hyc0812/yong-dt-erlang
