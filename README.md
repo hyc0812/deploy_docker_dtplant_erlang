@@ -3,7 +3,7 @@
 Docker Image for this project:  hyc0812/yong-dt-erlang:1.0
 
 
-First set the project you want to configure:
+1. First set the project you want to configure using Google cloud shell:
 
 ```
 gcloud config set project yong-house-marketplace-app
@@ -12,6 +12,36 @@ Updated property [core/project].
 
 > My project name: yong-house-marketplace-app
 
+
+
+2. Run the docker image existing on Docker Hub:
+
+```
+docker run -p 8080:8080 hyc0812/yong-dt-erlang:1.0
+```
+
+Or run the container in the background
+
+```
+docker run -dp 8080:8080 hyc0812/yong-dt-erlang:1.0
+```
+
+
+Unable to find image 'hyc0812/yong-dt-erlang:1.0' locally
+1.0: Pulling from hyc0812/yong-dt-erlang
+ca7dd9ec2225: Pull complete
+f6177287cb45: Pull complete
+888864e4d4b6: Pull complete
+Digest: sha256:17f2d97cca1eeaed37db3a225af166be886ab16fecdd6439b56196ba76114eb6
+Status: Downloaded newer image for hyc0812/yong-dt-erlang:1.0
+Exec: /docker_ex/erts-12.3.2.6/bin/erlexec -noinput +Bd -boot /docker_ex/releases/0.0.1/start -mode embedded -boot_var SYSTEM_LIB_DIR /docker_ex/lib -config /docker_ex/releases/0.0.1/sys.config -args_file /docker_ex/releases/0.0.1/vm.args -- foreground
+Root: /docker_ex
+/docker_ex
+Starting docker_ex_sup !
+Starting docker_ex_http_svr !
+
+
+3. 
 
 
 
