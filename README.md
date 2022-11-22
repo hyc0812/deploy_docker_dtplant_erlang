@@ -13,3 +13,11 @@ APIs to interact with the dt plant:
 http://localhost:8080/dtplant?echo=humidity
 
 ```
+
+
+```
+git pull
+git add .
+git commit -m "Message want to add"
+git push origin master
+```
