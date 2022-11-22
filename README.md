@@ -1,3 +1,22 @@
+### Play with Kubernetes GKE Cluster
+
+
+```
+kubectl version --short
+```
+Client Version: v1.25.3
+Kustomize Version: v4.5.7
+Server Version: v1.23.12-gke.100
+
+
+```
+kubectl get deployments
+kubectl get pods
+```
+
+
+
+
 ### MEMO
 
 Assignment_for digital twin class.
