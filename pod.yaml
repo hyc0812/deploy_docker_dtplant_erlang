@@ -17,9 +17,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: kasunedward/myapp:v1.1
-        ports:
-        - containerPort: 4000
+        image: hyc0812/yong-dt-erlang:1.0
         imagePullPolicy: Always
       restartPolicy: Always
 ---      
