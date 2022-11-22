@@ -1,5 +1,7 @@
 ### Play with Kubernetes GKE Cluster
 
+Docker Image for this project:  
+
 First set the project you want to configure:
 
 ```
