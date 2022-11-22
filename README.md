@@ -1,6 +1,7 @@
 ### Play with Kubernetes GKE Cluster
 
-Docker Image for this project:  
+Docker Image for this project:  hyc0812/yong-dt-erlang:1.0
+
 
 First set the project you want to configure:
 
